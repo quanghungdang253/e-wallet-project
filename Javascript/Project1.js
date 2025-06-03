@@ -225,6 +225,20 @@ class MBBank extends Sacombank{
 
     }
     CheckMoney(){
+           Swal.fire({
+                            title:`Thông báo số Tài khoản : ${this.#AcountMBbank} \n AgriBank  Số dư khả Dụng : + ${this.#presentMBbank}) `,
+                            icon:"error",
+                            timer: 5000,
+                            timerProgressBar: true,
+                            allowEscapeKey: true, /* cho phép đóng thông báo khi người dùng nhấp bên ngoài */
+                             icon: "icon",
+                             position: "top",
+                            customClass:{
+                                timerProgressBar: "progressBar",
+                                title: "title",
+        
+                             }
+                        })   
           alert("Thông báo STK : "+this.#AcountMBbank+" \n AgriBank  Số dư khả Dụng : "+this.#presentMBbank);
 
         }
