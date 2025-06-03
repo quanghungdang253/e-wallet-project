@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AJAX 1</title>
+</head>
+<body>
+        <button id="button"> Get Text file </button>
+    
+        <script>
+          document.getElementById("button").addEventListener("click",loadText); // lời gọi hàm loadText
+
+          
+function loadText(){
+        const xml = new XMLHttpRequest(); // tạo đối tượng XMLHttpRequest để gửi và nhận dữ liệu từ máy chủ 
+     // tiến hành mở một kết nối với máy chủ 
+     xml.open('GET','../text/text.txt', true); // true nghĩa là bất đồng bộ thường sử dụng cho ajax
+     xml.onload = function(){
+        // ta sử dụng status để kiểm tra sự phan hồi của máy chủ 
+            if(xml.status === 200){
+                  console.log(this.responseText);
+            }
+            else if(xml.status === 404){
+                    console.log()
+            }
+     }
+     xml.send();
+
+}
+        
+
+        </script>
+      
+</body>
+</html>

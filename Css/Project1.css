@@ -1,0 +1,209 @@
+
+body{
+   height: 100vh;  
+   text-align: center;
+   display: flex;
+   flex-direction: column;
+   justify-content:center; 
+   background-size: 70%;
+   text-size-adjust: none;/*auto:  cho phép trình duyệt điều chỉnh kích thước văn bản */
+   /*none : không cho phép trình duyệt điều chỉnh kích thước văn bản */
+}
+.Backgroundimages{
+ max-width: 40%;
+   transform: translateX(68%);
+}
+
+.wraper{
+
+    background: rgba(13, 14, 14, 0.9);  
+    border-radius: 30px;
+    padding: 10px 10px;
+    min-height: 100px;  /* min-height: chiều cao tối thiếu  */
+   
+    box-shadow: 10px 10px 10px white;
+}
+.Bank{
+    margin: 0px 0px 0px 0px;
+  
+}
+/* PHẦN BAO QUANH NHẬP THÔNG TIN */
+#information{ /* phần bao quanh nhập thông tin */
+    display: block;
+   
+    width: 51%;
+    min-height: 60px;
+    margin: 0px 0px 0px 115px;
+    
+    align-items: center;
+    position: relative;
+    bottom: 30px;
+     
+}
+
+.Boxsubmit_Cancel{/*bao quanh submit và cancel của phần Nạp tiền  */
+    display: flex;
+   flex-wrap: nowrap;
+    
+}
+.Boxsubmit2_Cancel2{/*phần bao quanh nút submit và cancel của phần xem số tài khoản */
+    display: flex;
+}
+/*-----------------------ĐỊnh dạng thông tin thẻ---------------------------*/
+.informationBank{  /* phần nhập thông tin */
+    margin: 10px 10px;
+    width: 120%;
+    height: 35px;
+    font-size: 20px;
+    border-radius: 10px;
+    background: rgba(4, 4, 4, 0.1);
+    color: white;
+    box-shadow: 10px 6px 10px rgba(248, 243, 243, 0.953);
+}
+.Cancel_Submit{
+    width: 35%;
+    margin: 10px 20px;
+    height: 40px;
+    background: rgba(4, 4, 4, 0.3);
+    color: white;
+    font-family: "Merriweather", serif;
+    font-weight:bolder;
+    border-radius: 15px;
+    font-size: 16px;
+   
+}
+/* iconPassword */
+.fa.fa-key{
+    color: aliceblue;
+
+    position: relative;
+    top: 45px;
+    right: 144px;
+
+    font-size: 21px;
+   
+}
+/* icon_money */
+.fa.fa-money-bill-transfer{
+    color: aliceblue;
+    position: relative;
+  right: 20px;
+  bottom: 41px;
+  width: 30px;
+    font-size: 21px;
+}
+/* icon_account */
+.fa.fa-building-columns{
+    position:relative;
+    right: 133px;
+    top: 44px;
+    color: white;
+    margin: 10px 20px 0px 0px ;
+  
+    font-size: 21px;
+  
+}
+/* icon nạp tiền  */
+
+.fa.fa-money-check-dollar{
+    font-size: 21px;
+    
+    color: white;
+width: 30px;
+    position: relative;
+    right: 19px;
+    bottom: 39px;
+}
+/* phần nhập số tài khoản  */
+.wraperAccount{
+    height: 90px;
+  
+}
+
+/* phần bao quanh mật khẩu rút tiền  */
+.wraperPassword{ 
+    margin: 0px 0px 25px 0px;
+}
+
+/* ------------------------------------------------- */
+/* phần nút chuyển hình ảnh background */
+
+.nodeLeft_Right{
+    display: grid;
+    grid-template-rows: 40px 40px;
+    grid-template-columns: 30px 30px;
+    grid-column-gap: 95%;
+    position: fixed;
+    width: 100%;
+ 
+}
+.node{
+    background: rgb(248, 247, 247,0.4);
+  transition-property: background;
+  transition-duration: 2s;
+font-size: 15px;
+  border-radius: 10px;
+ 
+}
+.node:hover{ /* khi hover thì chuyển sang màu trắng */
+    background-color: rgb(24, 227, 34);
+}
+#body{
+    transition-duration:  3s;
+}
+
+/* ---------------------------------------------------------- */
+/*--------------------background xoay------------------------*/
+
+.images{
+    background-image: url("../Images/c493696c68f79d4213baf47e6b8c1b09.jpg");
+    background-repeat: no-repeat;
+    background-size: 100%;
+/* thuộc tính Animation giúp tại chuyển động  */
+   animation-name: imagesd;
+   animation-duration: 3s;
+   animation-iteration-count: infinite;
+   animation-direction: alternate-reverse;
+
+   position: fixed;
+   left: 88%;
+   bottom: 85%;
+   height: 100px;
+   width: 100px;
+   border-radius: 30px;
+
+}
+@keyframes imagesd{  /* @keyframe của animation */
+    from{
+        transform:translate(-100px,0);
+    }
+    to{
+        transform: translate(100px,0)
+    }
+}
+/* phần hiển thị thông báo */
+.titleAlert{
+    font-family: "Oswald", sans-serif;
+font-size: 25px;
+font-weight:bolder;
+}
+.paragraper{
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 30px;
+    font-weight: bolder;
+}
+/* Phần hiển thị thông báo lỗi  */
+.progressBar{
+    background-color: black;
+}
+.title{
+    font-family: "Oswald", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: weight;
+    font-style: normal;
+}
+.icon{
+    font-size: 10px;
+   
+    
+}
