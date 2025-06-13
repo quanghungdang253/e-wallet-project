@@ -162,16 +162,24 @@ class Sacombank{
                 }
                 withdrawmoney(value){         // hàm rút tiền 
                     if(!this.Check() ){
-                     
-                        alert("Invalid passwork ! Please input again");
-                                    return;
+                        Swal.fire({
+                            icon: 'error',
+                            title: 'Sai mật khẩu',
+                            text: "Mật khẩu k hợp lệ. vui lòng nhập lại", 
+                            confirmButtonText: "Thử lại"
+                        })
                 }    
                 if(!this.EnterAcount()){
                     alert("invalid Acount Number ");
                     return;
                 }
                      if(value > this.#presentAgribank){
-                        alert("Tài khoản của bạn hiện tại không đủ ");
+                       Swal.fire({
+    icon: 'warning',
+    title: 'Không đủ tài khoản',
+    text: 'Tài khoản của bạn hiện tại không đủ.',
+    confirmButtonText: 'OK'
+  });
                         return;
                      }else{
                         this.#presentAgribank -= value;
