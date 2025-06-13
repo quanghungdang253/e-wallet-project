@@ -7,6 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./Css/Project1.css">
     <link rel="stylesheet" href="./Css/Header.css"
+    <link rel="stylesheet" href="./Css/headerModule.css"/>
    
     <!-- link của thư viên font awesome-->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
@@ -19,6 +20,22 @@
         
 </head>
 <body id="body">
+<header class="header">
+    <div class="container">
+      <div class="logo">MyWebsite</div>
+      <nav class="navbar">
+        <ul class="nav-list">
+          <li><a href="#home">Home</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#contact">Contact</a></li>
+          <li><a href="#address">Address</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Nội dung các phần -->
+
         <div class="images">   
                     <p style="color: aliceblue; font-family: 'Courier New', Courier, monospace; margin-top: 36px; font-style: oblique; font-size: 20px;">  Welcome </p>
         </div>
@@ -29,7 +46,7 @@
     <div class="Backgroundimages">
       
                 <div class="wraper">
-                        <h1 class="Heading"> Ví Của Quang Hùng </h1>
+                        <h1 class="Heading"> Dự Án Nhóm 7 </h1>
                              <div class="Bank">
                      <select id="listBank" class="form_body">
                             <option > Chọn tài khoản Ngân hàng </option>
@@ -49,7 +66,35 @@
             </div>
         </div>
     </div>
-    
+    <footer class="footer">
+  <div class="footer-container">
+    <div class="footer-brand">
+      <h3>HealthyLife</h3>
+      <p>Trang web hỗ trợ kiểm tra và theo dõi sức khỏe của bạn mọi lúc mọi nơi.</p>
+    </div>
+
+    <div class="footer-links">
+      <h4>Liên kết</h4>
+      <ul>
+        <li><a href="#about">Giới thiệu</a></li>
+        <li><a href="#services">Dịch vụ</a></li>
+        <li><a href="#contact">Liên hệ</a></li>
+      </ul>
+    </div>
+
+    <div class="footer-contact">
+      <h4>Liên hệ</h4>
+      <p>📍 123 Đường Sức Khỏe, Quận 1, TP.HCM</p>
+      <p>📞 0123 456 789</p>
+      <p>📧 healthylife@example.com</p>
+    </div>
+  </div>
+
+  <div class="footer-bottom">
+    <p>© 2025 HealthyLife. Mọi quyền được bảo lưu.</p>
+  </div>
+</footer>
+
     
     
     <script src="./Javascript/Project1.js"></script>

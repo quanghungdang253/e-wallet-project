@@ -62,7 +62,6 @@ class Sacombank{
         withdrawmoney(value){  
            
             if(!this.Check() ){
-             
                 alert("Invalid passwork ! Please input again");
                             return;
         }
@@ -70,33 +69,64 @@ class Sacombank{
             alert("invalid Acount Number ");
             return;
         }
-             if(value > this.#present){
-                alert("Tài khoản của bạn hiện tại không đủ ");
-                return;
-             }
+            if (value > this.#present) {
+  Swal.fire({
+    icon: 'warning',
+    title: 'Không đủ tài khoản',
+    text: 'Tài khoản của bạn hiện tại không đủ.',
+    confirmButtonText: 'OK'
+  });
+  return;
+}
+
                 this.#present = this.#present - value;
            
-                alert("Đã rút " + value + " VND.Số dư còn lại : "+this.#present);
+              Swal.fire({
+  icon: 'success',
+  title: 'Rút tiền thành công',
+  html: `Đã rút <strong>${value}</strong> VND.<br>Số dư còn lại: <strong>${this.#present}</strong> VND.`,
+  confirmButtonText: 'Đóng'
+});
+
         }  
         // -----------------------------------------------------------
-        payin(value1){      // payin : đóng tiền  
-            if(!this.Check()){ // kiểm tra mật khẩu 
-                alert("Invalid passwork ! Please input again");
-                            return;
-            }
-                  if(!this.EnterAcount()){
-                         alert("invalid Acount Number ");
-                                  return;
-                            }
-        this.#present += value1;
+     payin(value1) {
+  // payin: đóng tiền
 
-        alert("Đã nạp " +value1+ " VNĐ ");
-    
-        }
+  if (!this.Check()) {
+    Swal.fire({
+      icon: 'error',
+      title: 'Sai mật khẩu',
+      text: 'Mật khẩu không hợp lệ! Vui lòng nhập lại.',
+      confirmButtonText: 'Thử lại'
+    });
+    return;
+  }
+
+  if (!this.EnterAcount()) {
+    Swal.fire({
+      icon: 'error',
+      title: 'Sai số tài khoản',
+      text: 'Số tài khoản không hợp lệ!',
+      confirmButtonText: 'Thử lại'
+    });
+    return;
+  }
+
+  this.#present += value1;
+
+  Swal.fire({
+    icon: 'success',
+    title: 'Nạp tiền thành công',
+    html: `Bạn đã nạp <strong>${value1}</strong> VNĐ vào tài khoản.<br/>Số dư hiện tại: <strong>${this.#present}</strong> VNĐ.`,
+    confirmButtonText: 'Đóng'
+  });
+}
+
         CheckMoney(){
             Audios.play();// âm thanh thông báo 
             Swal.fire({
-                    title: " Ngân Hàng SaComBank Thông Báo ",
+                    title: "Ngân Hàng SaComBank Thông Báo ",
                     text: "Số Tk : "+ this.#AccountNumber + "\n Số Dư Khả Dụng : "+this.#present+" VNĐ ",
                     icon: "success",
                     position:"top",
