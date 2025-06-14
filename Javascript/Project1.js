@@ -43,8 +43,8 @@ class Sacombank{
     #present;
     // isCheck = false;
         constructor(){
-            this.#AccountNumber = "hungsacombank"; // tài khoản pin mặc định 
-            this.#pin = "hung123";
+            this.#AccountNumber = "khoa"; // tài khoản pin mặc định 
+            this.#pin = "123";
           // mk nhập từ bên ngoài 
             this.NameBank = "Sacombank";
             this.#present = 1000;     
@@ -147,8 +147,8 @@ class Sacombank{
             constructor(){
                 super(); // khai báo super() để kế thừa lớp cha và sử dụng từ khóa this
                 this.NameBank = "Agribank"; // các thuộc tính của đối tượng 
-                this.#AcountAgribank = "hung123";
-                this.#PinAgribank = "hung123";
+                this.#AcountAgribank = "khoa";
+                this.#PinAgribank = "123";
                 this.#presentAgribank = 0;       
             }
             EnterAcount(){  // nhận số tài khoản nhập từ người dùng 
@@ -213,8 +213,8 @@ class MBBank extends Sacombank{
     #presentMBbank;
     constructor(){
         super();
-            this.#AcountMBbank = "hung123";
-            this.#PinMBbank = "hung123";
+            this.#AcountMBbank = "khoa";
+            this.#PinMBbank = "123";
             this.NameBank = "MbBank";
             this.#presentMBbank = 50.000;
     }
